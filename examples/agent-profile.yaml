@@ -1,0 +1,42 @@
+agent:
+  id: <AGENT_ID>
+  display_name: <AGENT_DISPLAY_NAME>
+  purpose: <ONE_SENTENCE_PURPOSE>
+  home_channel: <#AGENT_HOME_CHANNEL>
+  runtime_adapter: <RUNTIME_ADAPTER>
+  memory_scope: <MEMORY_SCOPE>
+
+boundaries:
+  can_do:
+    - <CAPABILITY_1>
+    - <CAPABILITY_2>
+  cannot_do:
+    - <BOUNDARY_1>
+    - <BOUNDARY_2>
+  requires_approval_for:
+    - <SIDE_EFFECT_CLASS>
+    - <PRIVILEGED_OPERATION>
+
+tools:
+  allowed:
+    - <TOOL_OR_TOOLSET>
+  denied:
+    - <TOOL_OR_TOOLSET>
+
+routing:
+  allowed_channels:
+    - <#PROJECT_CHANNEL>
+    - <#AGENT_HOME_CHANNEL>
+  escalation_channel: <#APPROVAL_CHANNEL>
+  review_channel: <#REVIEW_CHANNEL>
+  evidence_channel: <#EVIDENCE_CHANNEL>
+
+handoff:
+  format: markdown
+  required_fields:
+    - requested_outcome
+    - current_state
+    - evidence
+    - decisions
+    - blockers
+    - recommended_next_action

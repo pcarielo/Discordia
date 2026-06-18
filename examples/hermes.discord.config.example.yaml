@@ -1,0 +1,17 @@
+# Optional Hermes Agent runtime example.
+# This file is a generic example, not a Discordia requirement.
+
+discord:
+  require_mention: true
+  free_response_channels: ""
+  allowed_channels: ""
+  auto_thread: true
+  thread_require_mention: false
+  history_backfill: true
+  history_backfill_limit: 50
+  reactions: true
+  channel_prompts: {}
+  dm_role_auth_guild: ""
+  server_actions: "fetch_messages,search_members,create_thread,list_guilds,server_info,list_channels,channel_info,list_roles,member_info,list_pins"
+  allow_any_attachment: false
+  max_attachment_bytes: 33554432
